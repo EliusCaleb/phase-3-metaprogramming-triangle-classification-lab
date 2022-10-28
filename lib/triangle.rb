@@ -13,34 +13,22 @@ class Triangle
 
     if side1 >= (side2 + side3) || side2 >= (side1 + side3) || side3 >= (side1 + side2)
       raise TriangleError
-    end
-
-    
-
-    
+    end 
   end
-
-
-    
-    
+  
   
   def kind
     if ((@side1 == @side2) && (@side1 == @side3) && (@side2 == @side3))
       return :equilateral
     elsif ((@side1 == @side2) || (@side1 == @side3) || (@side2 == @side3))
       return :isosceles
-    
     else 
       return :scalene
-    end
-
-   
+    end   
   end
 
-  
-  class TriangleError < StandardError
-    
+ 
+  class TriangleError < StandardError  
+
   end
-
-
 end
